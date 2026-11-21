@@ -1,0 +1,2 @@
+# Visual.Studio-laba
+prosto
