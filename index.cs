@@ -53,8 +53,20 @@ internal class Program
         return result4;
     }
 
-    static void Main(string[] args)
+    static void Main()
     {
+        Console.WriteLine("Enter a number C (1-4):");
+
+        int C = int.Parse(Console.ReadLine());
+
+        if (C < 1 || C > 4)
+        {
+            Console.WriteLine("Error");
+            return;
+        }
+
+        Console.WriteLine("Enter a positive integer N:");
+
         int N = int.Parse(Console.ReadLine());
 
         if (N < 0)
@@ -63,9 +75,23 @@ internal class Program
             return;
         }
 
-        Console.WriteLine(Var1(N));
-        Console.WriteLine(Var2(N));
-        Console.WriteLine(Var3(N));
-        Console.WriteLine(Var4(N));
+        switch (C)
+        {
+            case 1:
+                Console.WriteLine(Var1(N));
+                return;
+            case 2:
+                Console.WriteLine(Var2(N));
+                return;
+            case 3:
+                Console.WriteLine(Var3(N));
+                return;
+            case 4:
+                Console.WriteLine(Var4(N));
+                return;
+            default:
+                Console.WriteLine("Error");
+                return;
+        }           
     }
 }
