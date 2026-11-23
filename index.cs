@@ -69,7 +69,7 @@ internal class Program
 
         int N = int.Parse(Console.ReadLine());
 
-        if (N < 0)
+        if (N <= 0)
         {
             Console.WriteLine("Error");
             return;
